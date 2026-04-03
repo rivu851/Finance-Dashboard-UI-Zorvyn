@@ -87,7 +87,7 @@ export const SummaryCards: React.FC<SummaryCardsProps> = ({ onMonthlyComparisonC
                 </div>
 
                 <div className="flex items-baseline gap-1">
-                  <span className="text-2xl font-bold text-white">$</span>
+                  <span className="text-2xl font-bold text-white">₹</span>
                   <AnimatedNumber value={card.value} className="text-2xl font-bold text-white" />
                 </div>
 

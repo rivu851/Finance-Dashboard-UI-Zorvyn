@@ -80,7 +80,7 @@ export const AddTransactionModal = ({ isOpen, onCloseAction }: { isOpen: boolean
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Amount</label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/45 font-bold">$</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/45 font-bold">₹</span>
                   <input
                     type="number"
                     step="0.01"

@@ -47,7 +47,7 @@ export function MonthlyComparison() {
             <BarChart data={monthData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--chart-grid)" />
               <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: 'var(--chart-tick)' }} dy={10} />
-              <YAxis axisLine={false} tickLine={false} tick={{ fill: 'var(--chart-tick)' }} tickFormatter={(val) => `$${val}`} />
+              <YAxis axisLine={false} tickLine={false} tick={{ fill: 'var(--chart-tick)' }} tickFormatter={(val) => `₹${val}`} />
               <Tooltip 
                 cursor={{ fill: 'rgba(200,255,29,0.04)' }}
                 contentStyle={{ borderRadius: '12px', border: '1px solid rgba(200,255,29,0.18)', background: 'rgba(7, 11, 8, 0.96)', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.28)', color: '#f2f4ea' }}
@@ -78,16 +78,16 @@ export function MonthlyComparison() {
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                   <span className="text-white/55">Income</span>
-                  <span className="font-semibold text-[#c8ff1d]">${data.Income.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                  <span className="font-semibold text-[#c8ff1d]">₹{data.Income.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
               </div>
               <div className="flex justify-between items-center">
                   <span className="text-white/55">Expense</span>
-                  <span className="font-semibold text-[#ffb46a]">${data.Expense.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                  <span className="font-semibold text-[#ffb46a]">₹{data.Expense.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
               </div>
                 <div className="pt-3 border-t border-white/8 flex justify-between items-center">
                   <span className="text-white font-medium">Net</span>
                   <span className={`font-bold ${data.Net >= 0 ? 'text-[#7ff2a3]' : 'text-[#ff7f7f]'}`}>
-                  ${data.Net.toLocaleString(undefined, {minimumFractionDigits: 2})}
+                  ₹{data.Net.toLocaleString(undefined, {minimumFractionDigits: 2})}
                 </span>
               </div>
             </div>

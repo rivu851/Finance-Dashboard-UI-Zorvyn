@@ -101,7 +101,7 @@
     color: #d5ff39 !important;
   }
 
-  html:not(.dark) main :where(h1, h2, h3, h4, h5, h6, p, div, span, li, td, th, label, small, strong):not(button):not(button *) {
+  html:not(.dark) main :where(h1, h2, h3, h4, h5, h6, p, div, span, li, td, th, label, small, strong):not(button):not(button *):not(.brand-text):not(.brand-text *):not(.recharts-tooltip-wrapper *) {
     color: #11180f !important;
   }
 

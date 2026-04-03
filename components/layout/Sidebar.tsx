@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isMobileMenu
               setActiveTab(item.label);
               setIsMobileMenuOpen(false);
             }}
-            className={`w-full flex items-center space-x-3 px-4 py-3 gap-5 text-sm font-semibold transition-all duration-200 border ${activeTab === item.label
+            className={`w-full flex items-center px-4 py-3 gap-3 text-sm font-semibold text-left transition-all duration-200 border ${activeTab === item.label
                 ? 'bg-black text-[#d5ff39] border-black/30 shadow-[0_16px_40px_rgba(0,0,0,0.18)]'
                 : 'text-black border-black hover:bg-white/25 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0'
               }`}

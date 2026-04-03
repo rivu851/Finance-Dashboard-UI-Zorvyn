@@ -53,11 +53,11 @@ export function IncomeSplineChart() {
             </defs>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--chart-grid)" strokeOpacity={0.75} />
             <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: 'var(--chart-tick)', fontSize: 12 }} dy={10} />
-            <YAxis axisLine={false} tickLine={false} tick={{ fill: 'var(--chart-tick)', fontSize: 12 }} tickFormatter={(val) => `$${val}`} />
+            <YAxis axisLine={false} tickLine={false} tick={{ fill: 'var(--chart-tick)', fontSize: 12 }} tickFormatter={(val) => `₹${val}`} />
             <Tooltip 
               contentStyle={{ borderRadius: '12px', border: '1px solid rgba(200,255,29,0.18)', background: 'rgba(7, 11, 8, 0.96)', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.28)' }}
               itemStyle={{ color: '#f2f4ea', fontWeight: 600 }}
-              formatter={(value: any) => [`$${value}`, 'Income']}
+              formatter={(value: any) => [`₹${value}`, 'Income']}
             />
             <Area 
               type="monotone" 

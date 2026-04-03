@@ -74,11 +74,11 @@ export const ChartsSection = () => {
                 axisLine={false}
                 tickLine={false}
                 tick={{ fill: 'var(--chart-tick)', fontSize: 12 }}
-                tickFormatter={(value) => `$${value}`}
+                tickFormatter={(value) => `₹${value}`}
               />
               <Tooltip
                 contentStyle={{ borderRadius: '12px', border: '1px solid rgba(200,255,29,0.18)', background: 'rgba(7, 11, 8, 0.96)', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.28)', color: '#f2f4ea' }}
-                formatter={(value: any) => [`$${value}`, 'Balance']}
+                formatter={(value: any) => [`₹${value}`, 'Balance']}
               />
               <Line
                 type="linear"

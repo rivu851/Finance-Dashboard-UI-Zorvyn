@@ -179,7 +179,7 @@ export const TransactionList = ({ onAddClickAction, isCompact = false, onViewAll
                   </td>
                   <td className={`px-6 py-4 text-sm font-bold text-right ${tx.type === 'income' ? 'text-emerald-600' : 'text-rose-600'
                     }`}>
-                    {tx.type === 'income' ? '+' : '-'}${tx.amount.toLocaleString()}
+                    {tx.type === 'income' ? '+' : '-'}₹{tx.amount.toLocaleString()}
                   </td>
                   {role === 'admin' && (
                     <td className="px-6 py-4 text-right">

@@ -26,7 +26,7 @@ export const InsightsSection = () => {
     {
       title: 'Monthly Comparison',
       value: isPositiveFlow ? 'Surplus' : 'Deficit',
-      subtitle: `${isPositiveFlow ? '+' : '-'}$${Math.abs(cashFlowDiff).toLocaleString()} vs last month target`,
+      subtitle: `${isPositiveFlow ? '+' : '-'}₹${Math.abs(cashFlowDiff).toLocaleString()} vs last month target`,
       icon: BarChart3,
     },
     {
