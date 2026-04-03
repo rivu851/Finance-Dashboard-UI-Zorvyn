@@ -1,6 +1,6 @@
 # 💸 Finance Dashboard UI — Zorvyn Assignment
 
-A modern, responsive **Finance Dashboard** built using **Next.js (App Router + TypeScript)** to help users track financial activity, explore transactions, and gain insights into spending patterns.
+A modern, responsive **Finance Dashboard** built using **Next.js (App Router + TypeScript)** to help users track financial activity, analyze spending patterns, and manage transactions through an intuitive interface.
 
 🔗 **Live Demo:** https://finance-dashboard-ui-zorvyn-five.vercel.app/
 📦 **Repository:** https://github.com/rivu851/Finance-Dashboard-UI-Zorvyn
@@ -9,9 +9,30 @@ A modern, responsive **Finance Dashboard** built using **Next.js (App Router + T
 
 ## 🚀 Overview
 
-This project was developed as part of a frontend evaluation assignment. It focuses on building a clean, intuitive, and interactive dashboard interface using modern frontend practices.
+This project was developed as part of a frontend evaluation assignment. The goal was to design a **clean, intuitive, and interactive financial dashboard** while maintaining a scalable and well-structured codebase.
 
-The application simulates a real-world fintech dashboard with structured components, reusable logic, and dynamic UI behavior.
+The application simulates a real-world fintech dashboard, focusing on:
+
+* Clear data visualization
+* Component-based architecture
+* Role-based UI behavior
+* Maintainable frontend structure
+
+---
+
+## 🧠 Architecture Approach
+
+The project follows a **modular and type-based architecture**, ensuring separation of concerns:
+
+* **`app/`** → Routing & layout (Next.js App Router)
+* **`components/`** → UI grouped by type (charts, layout, dashboard, etc.)
+* **`context/`** → Global state management
+* **`hooks/`** → Reusable logic
+* **`data/`** → Mock data
+* **`lib/`** → Utility functions
+* **`types/`** → TypeScript definitions
+
+This structure ensures clarity, scalability, and ease of maintenance.
 
 ---
 
@@ -19,60 +40,60 @@ The application simulates a real-world fintech dashboard with structured compone
 
 * **Framework:** Next.js (App Router)
 * **Language:** TypeScript
-* **Styling:** Tailwind CSS (if you're using it — adjust if needed)
-* **Charts:** Recharts / Chart.js (update accordingly)
-* **State Management:** React Hooks + Context API
+* **Styling:** Tailwind CSS *(update if different)*
+* **Charts:** Recharts / Chart.js *(update accordingly)*
+* **State Management:** React Context API + Hooks
 * **Deployment:** Vercel
 
 ---
 
 ## 📂 Project Structure
 
-```bash
+```bash id="s7lq5j"
 finance-dashboard-zorvyn/
 │
 ├── app/
 │   ├── globals.css          # Global styles
-│   ├── layout.tsx           # Root layout (Next.js App Router)
-│   ├── page.tsx             # Main dashboard entry point
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Main entry (Dashboard)
 │
-│   ├── components/
-│   │   ├── charts/          # Data visualization components
-│   │   │   ├── ChartSection.tsx
-│   │   │   ├── IncomeSpineChart.tsx
-│   │   │   └── MonthlyComparison.tsx
-│   │   │
-│   │   ├── dashboard/       # Dashboard-specific UI
-│   │   │   ├── SummaryCards.tsx
-│   │   │   └── InsightsAndRole.tsx
-│   │   │
-│   │   ├── layout/          # Layout components
-│   │   │   ├── Sidebar.tsx
-│   │   │   ├── Header.tsx
-│   │   │   └── MainContent.tsx
-│   │   │
-│   │   ├── transactions/    # Transaction-related components
-│   │   │   ├── TransactionList.tsx
-│   │   │   └── AddTransactionModal.tsx
-│   │   │
-│   │   ├── providers/       # Theme / app providers
-│   │   │   └── ThemeProvider.tsx
-│   │   │
-│   │   └── ui/              # Reusable UI components
-│   │       ├── AnimatedNumber.tsx
-│   │       ├── ProfessionalIcons.tsx
-│   │       └── ThemeToggle.tsx
+├── components/
+│   ├── charts/              # Data visualization
+│   │   ├── ChartSection.tsx
+│   │   ├── IncomeSplineChart.tsx
+│   │   └── MonthlyComparison.tsx
 │   │
-│   ├── views/               # Page-level compositions
-│   ├── context/             # Global state (FinanceProvider)
-│   ├── data/                # Mock financial data
+│   ├── dashboard/           # Dashboard-specific UI
+│   │   ├── SummaryCards.tsx
+│   │   └── InsightsAndRole.tsx
+│   │
+│   ├── layout/              # Layout components
+│   │   ├── Sidebar.tsx
+│   │   ├── Header.tsx
+│   │   └── MainContent.tsx
+│   │
+│   ├── transactions/        # Transaction UI
+│   │   ├── TransactionList.tsx
+│   │   └── AddTransactionModal.tsx
+│   │
+│   ├── providers/           # App providers
+│   │   └── ThemeProvider.tsx
+│   │
+│   └── ui/                  # Reusable UI components
+│       ├── AnimatedNumber.tsx
+│       ├── ProfessionalIcons.tsx
+│       └── ThemeToggle.tsx
+│
+├── context/
+│   └── FinanceContext.tsx   # Global state
 │
 ├── hooks/                   # Custom hooks
+├── data/                    # Mock financial data
 ├── lib/                     # Utility functions
 ├── types/                   # TypeScript types
 │
-├── .eslintrc.json
 ├── .env.example
+├── .eslintrc.json
 └── README.md
 ```
 
@@ -94,7 +115,7 @@ finance-dashboard-zorvyn/
 
 ### 💳 Transactions
 
-* Detailed transaction list
+* Detailed transaction listing
 * Includes:
 
   * Date
@@ -113,7 +134,7 @@ finance-dashboard-zorvyn/
 
 * **Viewer** → Read-only access
 * **Admin** → Can add/edit transactions
-* Role switching via UI toggle
+* Role switching via UI
 
 ---
 
@@ -121,35 +142,21 @@ finance-dashboard-zorvyn/
 
 * Highest spending category
 * Monthly comparison
-* Basic financial observations
+* Key financial observations
 
 ---
 
 ### 🎨 UI/UX
 
-* Clean and modern design
+* Clean and modern interface
 * Responsive across devices
-* Reusable component structure
-
----
-
-## 🧠 Architecture & Design Decisions
-
-* Used **Next.js App Router** for scalable routing and layout management
-* Organized components by responsibility:
-
-  * Charts → visualization
-  * Layout → structure
-  * UI → reusable elements
-* Implemented **Context API** for global state handling
-* Separated mock data and logic for maintainability
-* Focused on frontend-only implementation (no backend dependency)
+* Modular and reusable components
 
 ---
 
 ## ⚙️ Setup & Installation
 
-```bash
+```bash id="5ibgrv"
 # Clone the repository
 git clone https://github.com/rivu851/Finance-Dashboard-UI-Zorvyn.git
 
@@ -168,20 +175,20 @@ npm run dev
 ## 🧪 Assumptions
 
 * Data is static/mock-based
-* Role-based access is simulated (frontend only)
+* Role-based access is simulated at UI level
 * No backend or authentication implemented
 
 ---
 
 ## 🔮 Future Improvements
 
-* Backend integration (API + DB)
+* Backend/API integration
 * Authentication & real RBAC
-* Persistent storage (localStorage / API)
-* Advanced filtering & grouping
-* Dark mode enhancements
+* Persistent storage (localStorage / DB)
+* Advanced filtering & analytics
+* Dark mode improvements
 * Animations & micro-interactions
-* Data export (CSV/JSON)
+* Export functionality (CSV/JSON)
 
 ---
 
@@ -197,6 +204,12 @@ npm run dev
 
 ---
 
+## 📸 Screenshots
+
+*(Add dashboard & transaction UI screenshots here)*
+
+---
+
 ## 👨‍💻 Author
 
 **Rivu Chattopadhyay**
@@ -207,6 +220,6 @@ npm run dev
 
 ## ⭐ Final Note
 
-This project demonstrates a structured approach to building scalable frontend applications using Next.js, focusing on clean UI, modular architecture, and user-centric design.
+This project demonstrates a strong focus on **clean UI design, modular architecture, and scalable frontend development** using modern tools like Next.js and TypeScript.
 
 ---
