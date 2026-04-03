@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="./assets/Dashboard%201 .png" width="48%" />
-  <img src="./assets/Dashboard%202.png" width="48%" />
+  <img src="./assets/Dashboard%201 .png" width="45%" style="margin-right: 10px;" />
+  <img src="./assets/Dashboard%202.png" width="45%" />
 </p>
 
 <br/>
