@@ -101,11 +101,11 @@
     color: #d5ff39 !important;
   }
 
-  html:not(.dark) main :where(h1, h2, h3, h4, h5, h6, p, div, span, li, td, th, label, small, strong):not(button):not(button *):not(.brand-text):not(.brand-text *):not(.recharts-tooltip-wrapper *) {
+  html:not(.dark) main :where(h1, h2, h3, h4, h5, h6, p, div, span, li, td, th, label, small, strong):not(button):not(button *):not(.brand-text):not(.brand-text *):not(.recharts-tooltip-wrapper *):not(.dark-strip):not(.dark-strip *) {
     color: #11180f !important;
   }
 
-  html:not(.dark) main svg:not(.brand-icon) {
+  html:not(.dark) main svg:not(.brand-icon):not(.dark-strip *) {
     color: #11180f !important;
     stroke: currentColor;
   }
@@ -121,9 +121,11 @@
     stroke: currentColor;
   }
 
+  html:not(.dark) main .surface-card .dark-strip,
+  html:not(.dark) main .surface-card .dark-strip *,
   html:not(.dark) main .dark-strip,
   html:not(.dark) main .dark-strip * {
-    color: #f6f7f2 !important;
+    color: rgba(255, 255, 255, 0.75) !important;
   }
 
   html:not(.dark) .recharts-tooltip-wrapper,
@@ -136,7 +138,7 @@
     border-color: rgba(200, 255, 29, 0.2) !important;
   }
 
-  html:not(.dark) .surface-card [class*='text-white'] {
+  html:not(.dark) .surface-card [class*='text-white']:not(.dark-strip):not(.dark-strip *) {
     color: #152013 !important;
   }
 

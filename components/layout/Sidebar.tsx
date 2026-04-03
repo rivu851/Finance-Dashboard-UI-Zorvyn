@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, LayoutDashboard, CreditCard, PieChart, BarChart3, Users, Settings, LifeBuoy, CircleDollarSign } from 'lucide-react';
+import { X, LayoutDashboard, CreditCard, PieChart, BarChart3, Users, Settings, LifeBuoy, IndianRupee } from 'lucide-react';
 
 interface SidebarProps {
   activeTab: string;
@@ -24,7 +24,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isMobileMenu
       <div className="relative flex items-center justify-between mb-10 px-2">
         <div className="flex items-center space-x-3">
           <div className="flex items-center justify-center rounded-full p-1.5 bg-black/10">
-            <CircleDollarSign size={24} strokeWidth={2.4} className="text-black" />
+            <IndianRupee size={24} strokeWidth={2.4} className="text-black" />
           </div>
           <span className="text-xl font-bold text-black tracking-tight">Finance</span>
         </div>
