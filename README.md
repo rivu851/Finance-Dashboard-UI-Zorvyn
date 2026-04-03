@@ -1,8 +1,11 @@
 <p align="center">
-  <img src="./assets/Dashboard%201 .png" width="45%" style="margin-right: 10px;" />
-  <img src="./assets/Dashboard%202.png" width="45%" />
+  <table>
+    <tr>
+      <td><img src="./assets/Dashboard%201 .png" width="100%"/></td>
+      <td><img src="./assets/Dashboard%202.png" width="100%"/></td>
+    </tr>
+  </table>
 </p>
-
 <br/>
 
 # 💸 Finance Dashboard UI — Zorvyn Assignment
